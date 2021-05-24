@@ -1,0 +1,75 @@
+﻿{% extends "shop/base.html" %}
+<!-♕ -->
+{% load static %}
+{% block title %}
+    Корзина
+{% endblock %}
+{% block content %}
+<body>
+    <style>
+        body {
+             background-image: url(../../static/app/content/123.jpg); 
+    background-attachment: fixed;
+    background-size:cover;
+    background-attachment: fixed;
+        }
+    </style>
+<div class="main">
+    <div class="jumbotron">
+        <h1>Ваша корзина</h1>
+        <style>
+            th { 
+                text-align:center;
+            }
+        </style>
+        <table width="100%" border="7" cellpadding="7">
+   <tr align="justify" valign="middle" bordercolor="#000" bgcolor="fff" text-align="center">
+    
+   
+            <thead>
+            <tr>
+                
+               <th>Фото</th>
+                <th>Товар</th>
+                <th>Количество</th>
+                <th>Удалить</th>
+                <th>Цена за единицу</th>
+                <th>Итог</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for item in cart %}
+                {% with product=item.product %}
+                    <tr>
+                        <td valign="top" align="center">
+                            <a >
+                               <img src="{{ product.image.url }}" width="100" />
+                            </a>
+                        
+                        <td valign="middle" align="center">{{ product.name }}</td>
+                        <td valign="middle" align="center">{{ item.quantity }}</td>
+                        <td valign="middle" align="center"><a href="{% url "cart:cart_remove" product.id%}">Удалить товар</a></td>
+                        <td valign="middle" align="center" class="num">{{ item.price }}Руб</td>
+                        <td valign="middle" align="center" class="num">{{ item.total_price }}Руб</td>
+                    </tr>
+                {% endwith %}
+            {% endfor %}
+            <tr class="total">
+                <td valign="middle" align="center">Всего</td>
+                <td valign="middle" align="center" colspan="4"></td>
+                <td valign="middle" align="center" class="num">{{ cart.get_total_price }}Рyблей</td>
+            </tr>
+            </tbody>
+            
+  </table>
+        
+        <p class="text-right">
+            <a href="{% url "shop:product_list" %}" class="button light">Продолжить покупки</a>
+            <a href="{% url "orders:order_create" %}" class="button">
+                Оформить заказ
+            </a>
+        </p>
+    </div>
+</div>
+    </body>
+{% endblock %}

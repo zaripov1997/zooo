@@ -1,0 +1,56 @@
+﻿{% extends "shop/base.html" %}
+{% load static %}
+
+{% block content %}
+<body>
+    <style>
+        body {
+             background-image: url(../../static/app/content/123.jpg); 
+    background-attachment: fixed;
+    background-size:cover;
+    background-attachment: fixed;
+        }
+    </style>
+<div class="main">
+    
+    <div class="col-md-8 products">
+        <div class="main">
+    <div class="jumbotron">
+        <style>
+        .jumbotron {
+  
+  margin-bottom: 80px;
+  font-size: 21px;
+  font-weight: 300;
+  line-height: 2.1428571435;
+  color: inherit;
+  background-color: #eeeeee;
+}
+        </style>
+        
+    
+        <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}" style="width:50%"  >
+        <h1>{{ product.name }}</h1>
+        <h2><a href="{{ product.category.get_absolute_url }}">{{ product.category }}</a></h2>
+        <p class="price">{{ product.price }}₽</p>
+        <form action="{% url "cart:cart_add" product.id %}" method="post">
+            {{ cart_product_form }}
+            {% csrf_token %}
+            {% if not user.is_authenticated %}
+            <div>
+            <style>                b {
+                    background-color: yellow
+                }
+            </style>
+            <b>Пожалуйста зарегистрируйтесь для добавления товара</b></div>
+            {% endif %}
+            {% if  user.is_authenticated %}
+            <input type="submit" value="Добавить">
+            {% endif %}
+        </form>
+        {{ product.description|linebreaks }}
+        </div>
+    </div>
+
+</body>
+{% endblock %}

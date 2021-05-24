@@ -1,0 +1,129 @@
+body {
+    padding-top: 150px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+/* цвет фона и рамки навигационного меню */
+.navbar-default {
+    background-color: #200101;
+    border-color: #b94a48;
+}
+    /* цвет текста, содержащий название сайта или бренда */
+    .navbar-default .navbar-brand {
+        color: #ecf0f1;
+    }
+        /* цвет текста (название сайта или бренда), при поднесении к нему курсора мышки или при его нахождении в фокусе */
+        .navbar-default .navbar-brand:hover,
+        .navbar-default .navbar-brand:focus {
+            color: #d1ffed;
+        }
+    /* ÷вет пунктов навигационного меню */
+    .navbar-default .navbar-nav > li > a {
+        color: #6b6f6f;
+    }
+        /* ÷вет пункта меню, при поднесении к нему курсора мышки или при его нахождении в фокусе */
+        .navbar-default .navbar-nav > li > a:hover,
+        .navbar-default .navbar-nav > li > a:focus {
+            color: #d1ffed;
+        }
+    /* ÷вет и фон активного пункта меню, а также поднесении к нему курсора мышки или при его нахождении в фокусе */
+    .navbar-default .navbar-nav > .active > a,
+    .navbar-default .navbar-nav > .active > a:hover,
+    .navbar-default .navbar-nav > .active > a:focus {
+        color: #d1ffed;
+        background-color: #27ae60;
+    }
+    /* ÷вет и фон открытого пункта меню, а также поднесении к нему курсора мышки или при его нахождении в фокусе */
+    .navbar-default .navbar-nav > .open > a,
+    .navbar-default .navbar-nav > .open > a:hover,
+    .navbar-default .navbar-nav > .open > a:focus {
+        color: #d1ffed;
+        background-color: #27ae60;
+    }
+    /* ÷вет стрелочки (треугольничка) у раскрывающихс€ пунктов меню */
+    .navbar-default .navbar-nav > .dropdown > a .caret {
+        border-top-color: #ecf0f1;
+        border-bottom-color: #ecf0f1;
+    }
+    /* ÷вет стрелочки (треугольничка) при поднесении к нему курсора мышки или при его нахождении в фокусе */
+    .navbar-default .navbar-nav > .dropdown > a:hover .caret,
+    .navbar-default .navbar-nav > .dropdown > a:focus .caret {
+        border-top-color: #d1ffed;
+        border-bottom-color: #d1ffed;
+    }
+    /* ÷вет стрелочки (треугольничка), открывшегос€ пункта меню */
+    .navbar-default .navbar-nav > .open > a .caret,
+    .navbar-default .navbar-nav > .open > a:hover .caret,
+    .navbar-default .navbar-nav > .open > a:focus .caret {
+        border-top-color: #d1ffed;
+        border-bottom-color: #d1ffed;
+    }
+    /* CSS стили дл€ мобильных устройств */
+    /* ÷вет рамки у кнопки, котора€ открывает меню */
+    .navbar-default .navbar-toggle {
+        border-color: #27ae60;
+    }
+        /* ÷вет фона кнопки (котора€ открывает меню) при поднесении к ней курсора мышки или при нахождении еЄ в фокусе */
+        .navbar-default .navbar-toggle:hover,
+        .navbar-default .navbar-toggle:focus {
+            background-color: #27ae60;
+        }
+        /* ÷вет полосочек в кнопочке, котора€ открывает меню */
+        .navbar-default .navbar-toggle .icon-bar {
+            background-color: #ecf0f1;
+        }
+/* ÷вет пунктов меню в раскрывающихс€ списках */
+@media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: #ecf0f1;
+    }
+        /* ÷вет и фон пункта меню в раскрывающихс€ списках, при поднесении к нему курсора мышки или при нахождении его в фокусе */
+        .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+        .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+            color: #d1ffed;
+            background-color: #27ae60;
+        }
+}
+#bg {
+    background-size: 1800px 900px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+}

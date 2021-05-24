@@ -1,0 +1,38 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+<!-♕ -->
+<div class="jumbotron">
+   <h1>Зоомагазин Филя</h1>
+    <p class="lead">«Филя»– лучший друг животных и их владельцев!</p>
+    <p><a class="btn btn-default" href="{% url 'about' %}">  Подробнее..  &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="jumbotron">
+             <h2>Корма</h2>
+        <p> </p>
+        <p><a class="btn btn-default" href="https://pypi.org/">Подробнее..  &raquo;</a></p>
+              </div>
+    </div>
+    <div class="col-md-4">
+        <div class="jumbotron">
+    
+        <h2>Игрушки и лакомства</h2>
+        <p>
+            
+        </p>
+        <p><a class="btn btn-default" href="http://www.djangobook.com/en/2.0/index.html">Подробнее..  &raquo;</a></p>
+             </div>
+    </div>
+    <div class="col-md-4">
+        <div class="jumbotron">
+             <h2>Уход</h2>
+        <p></p>
+        <p><a class="btn btn-default"  href="http://azure.microsoft.com">Подробнее.. &raquo;</a></p>
+          </div>
+    </div>
+</div>
+
+{% endblock %}

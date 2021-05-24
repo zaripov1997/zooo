@@ -1,0 +1,68 @@
+﻿{% extends "app/layout.html" %}
+{% load static %}
+{% block content %}
+<h2>{{ message }}</h2>
+<!-♕ -->
+
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div class="row">
+    <div class="col-md-4">
+          <style>
+   h1 {
+    font-family: Verdana, cursive, Helvetica, sans-serif; /* Рубленый шрифт заголовка */
+   } 
+   p {
+    font-family: 'Times New Roman', Times, serif; /* Шрифт с засечками */
+    font-style: italic; /* Курсивное начертание */
+   }
+  </style>
+        <h2>Игрушки и лакомства</h2>
+         <img src="{% static 'app/content/1.jpg ' %}" width="200" height="200" alt="logo" />
+           
+        
+        <p>
+            
+        </p>
+        <p><a class="btn btn-default" href="https://zveryatam.ru/igrushki-trixie-germaniya-p1.html">Подробнее..  &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+          <style>
+   h1 {
+    font-family: Verdana, cursive, Helvetica, sans-serif; /* Рубленый шрифт заголовка */
+   } 
+   p {
+    font-family: 'Times New Roman', cursive, serif; /* Шрифт с засечками */
+    font-style: italic; /* Курсивное начертание */
+   }
+  </style>
+        <h2>Корма</h2>
+        <img src="{% static 'app/content/3.jpg ' %}" width="200" height="200" alt="logo" />
+        <p> </p>
+        <p><a class="btn btn-default" href="https://petobzor.com/category/stati-o-korma-dlya-domashnih-zhivotnyh/">Подробнее..  &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+          <style>
+   h1 {
+    font-family: Verdana, cursive, Helvetica, sans-serif; /* Рубленый шрифт заголовка */
+   } 
+   p {
+    font-family: 'Times New Roman', Times, serif; /* Шрифт с засечками */
+    font-style: italic; /* Курсивное начертание */
+   }
+  </style>
+        <h2>Уход</h2>
+        <img src="{% static 'app/content/2.jpg ' %}" width="200" height="200" alt="logo" />
+        <p></p>
+        <p><a class="btn btn-default" href="https://xn--80aidose1fxa.xn--p1ai/publ/ukhod_za_zhivotnymi/1">Подробнее.. &raquo;</a></p>
+          </div>
+</div>
+
+</body>
+</html>
+{% endblock %}

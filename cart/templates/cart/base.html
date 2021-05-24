@@ -1,0 +1,40 @@
+﻿{% extends "app/layout.html" %} 
+{% load static %}
+{% block title %}
+    {% if category %}{{ category.title }}{% else %}Корзина{% endif %}
+{% endblock %}
+{% block content %}
+<!-♕ -->
+<div class="jumbotron">
+    <body id="bg" style="background-image: url('{% static "images/123.jpg"%}')";>
+    <style>
+   div {
+    background-image: url(../../static/app/content/123.jpg);
+    background-size:cover;
+    background-attachment: fixed;
+        }
+        </style>
+    <div class="cart">
+        {% if user.is_authenticated %}
+            {% with total_items=cart|length %}
+            {% if cart|length > 0 %}
+                Ваша корзина:
+                <a href="{% url "cart:cart_detail" %}">
+                    {{ total_items }} Товар(a) {{ total_items|pluralize }},
+                   {{ cart.get_total_price }}Рублей
+                </a>
+            {%  else %}
+                Корзина пуста.
+            {% endif %}
+        {% endwith %}
+        {% endif %}
+    </div>
+</div>
+  <div class="container body-content">
+{% block content %}{% endblock %}
+        <hr/>
+        <footer>
+            <p>&copy; {{ year }} - Зоомагазин Филя</p>
+        </footer>
+    </div>
+{% endblock %}
